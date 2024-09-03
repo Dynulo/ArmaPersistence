@@ -43,19 +43,19 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: i686-unknown-linux-gnu
       - run: mv libdynulo_persistence.so dynulo_persistence.so
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: x86_64-unknown-linux-gnu
       - run: mv libdynulo_persistence.so dynulo_persistence_x64.so
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: x86_64-pc-windows-msvc
       - run: mv dynulo_persistence.dll dynulo_persistence_x64.dll
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: i686-pc-windows-msvc
 
